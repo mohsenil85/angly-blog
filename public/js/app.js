@@ -14,9 +14,21 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/index',
       controller: 'IndexCtrl'
     }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+    when('/addPost', {
+      templateUrl: 'partials/addPost',
+      controller: 'AddPostCtrl'
+    }).
+    when('/readPost/:id', {
+      templateUrl: 'partials/readPost',
+      controller: 'ReadPostCtrl'
+    }).
+    when('/editPost/:id', {
+      templateUrl: 'partials/editPost',
+      controller: 'EditPostCtrl'
+    }).
+    when('/deletePost/:id', {
+      templateUrl: 'partials/deletePost',
+      controller: 'DeletePostCtrl'
     }).
     otherwise({
       redirectTo: '/'
