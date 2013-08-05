@@ -1,19 +1,22 @@
 extends layout
-
 block body
-  div(ng-controller='AppCtrl')
-    h2 Hello {{name}}
-    ul.menu
-      li
-        a(href='view1') view1
-      li
-        a(href='view2') view2
+  div.navbar.navbar-inverse.navbar-fixed-top
+    div.container
+      a.navbar-brand(href='#') Angly Blog
+  div.container-narrow
+  div(ng-controller='AppCtrl').jumbotron
+    div.container.custom-align
+      div.row
+        h1.hero angly blog
+      div.span9
+       ul.row
+         div.col-lg-4
+           a(href='/').btn.btn-large.btn-default Home
+         div.col-lg-4
+           a(href='/addPost').btn.btn-large.btn-default Add a post
 
     div(ng-view)
 
-    div
-      | Angular seed app: v
-      span(app-version)
 
   script(src='js/lib/angular/angular.js')
   script(src='js/app.js')
@@ -21,3 +24,5 @@ block body
   script(src='js/controllers.js')
   script(src='js/filters.js')
   script(src='js/directives.js')
+  script(src='js/lib/jquery.min.js')
+  script(src='js/lib/bootstrap.min.js')

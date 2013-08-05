@@ -28,3 +28,13 @@
   content: "";
   padding: 0;
 }
+
+.custom-align{
+  padding: 10px;
+  width: 300px;
+  margin:auto;
+}
+
+.custom-align ul {
+  padding-left:28px;
+}
