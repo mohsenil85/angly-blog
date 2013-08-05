@@ -17,11 +17,10 @@ angular.module('myApp.controllers', []).
     });
 
   }).
-  controller('MyCtrl1', function ($scope) {
-    // write Ctrl here
-
-  }).
-  controller('MyCtrl2', function ($scope) {
-    // write Ctrl here
-
+  controller('IndexCtrl', function ($scope, $http) {
+    $http.get('api/posts')
+      .success(function(data, status, headers, config){
+        $scope.posts = data.posts;
+      });
   });
+    
